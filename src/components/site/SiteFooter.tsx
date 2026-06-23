@@ -34,7 +34,7 @@ const COLS = [
 export function SiteFooter() {
   return (
     <footer className="mt-24 border-t border-border bg-secondary/40">
-      <div className="container-x grid gap-12 py-16 lg:grid-cols-[1.4fr_3fr] lg:gap-16 lg:py-20">
+      <div className="container-x grid gap-8 sm:gap-10 py-16 lg:grid-cols-[1.4fr_3fr] lg:gap-16 lg:py-20">
         <div>
           <Logo />
           <p className="mt-5 max-w-sm text-sm leading-7 text-muted-foreground">
@@ -56,7 +56,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-3">
+        <div className="grid grid-cols-2 gap-8 sm:gap-10 md:grid-cols-3">
           {COLS.map((c) => (
             <div key={c.title}>
               <h4 className="text-xs font-bold tracking-[0.18em] text-foreground/60 uppercase">

@@ -33,7 +33,7 @@ function ProductsIndex() {
   return (
     <>
       <section className="border-b border-border bg-secondary/40">
-        <div className="container-x py-14 lg:py-20">
+        <div className="container-x py-10 sm:py-14 lg:py-20">
           <p className="eyebrow">كتالوج المنتجات</p>
           <h1 className="display-1 mt-5 max-w-3xl">
             منتجات معتمدة. تركيبات حقيقية. نتائج قابلة للقياس.
