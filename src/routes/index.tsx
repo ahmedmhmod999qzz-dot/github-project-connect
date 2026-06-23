@@ -43,45 +43,45 @@ function Home() {
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-background">
-      <div className="container-x pt-10 lg:pt-16">
+      <div className="container-x pt-8 lg:pt-16">
         <div className="grid items-end gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-14">
           <div className="relative">
             <p className="eyebrow">منصّة الحلول الزراعية · منذ ١٩٩٨</p>
             <h1 className="display-1 mt-6 text-balance">
               نُنمّي الأرضَ بالعلم،
-              <br />
+              <span className="block sm:inline"> </span>
               ونصون المحصولَ بالخبرة.
             </h1>
-            <p className="mt-7 max-w-xl text-lg leading-9 text-muted-foreground">
+            <p className="mt-6 max-w-xl text-base leading-8 text-muted-foreground sm:text-lg sm:leading-9">
               منصّة متكاملة تجمع الأسمدة والمبيدات والبذور المعتمدة، إلى جانب
               أكبر قاعدة معرفية عربية لتشخيص أمراض المحاصيل ووضع برامج العلاج
               والوقاية المدروسة.
             </p>
-            <div className="mt-9 flex flex-wrap items-center gap-3">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <Link
                 to="/diseases"
-                className="group inline-flex items-center gap-3 rounded-md bg-primary px-6 py-4 text-sm font-semibold text-primary-foreground shadow-soft transition hover:bg-primary-deep"
+                className="group inline-flex items-center justify-center gap-3 rounded-md bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-soft transition hover:bg-primary-deep sm:py-4"
               >
                 ابدأ تشخيص محصولك
                 <span className="inline-block rotate-180 transition-transform group-hover:-translate-x-1">←</span>
               </Link>
               <Link
                 to="/products"
-                className="inline-flex items-center gap-3 rounded-md border border-border-strong bg-background px-6 py-4 text-sm font-semibold text-foreground transition hover:bg-secondary"
+                className="inline-flex items-center justify-center gap-3 rounded-md border border-border-strong bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition hover:bg-secondary sm:py-4"
               >
                 استعرض المنتجات
               </Link>
             </div>
 
-            <div className="mt-12 flex items-center gap-6 border-t border-border pt-6">
-              <div className="flex -space-x-2 -space-x-reverse">
+            <div className="mt-10 flex items-center gap-5 border-t border-border pt-6 sm:mt-12 sm:gap-6">
+              <div className="flex -space-x-2 -space-x-reverse shrink-0">
                 {[0,1,2,3].map(i=>(
                   <span key={i} className="grid h-9 w-9 place-items-center rounded-full border-2 border-background bg-secondary text-xs font-bold text-foreground/70">
                     {["أ","م","س","ر"][i]}
                   </span>
                 ))}
               </div>
-              <div className="text-sm leading-6 text-muted-foreground">
+              <div className="min-w-0 text-xs leading-6 text-muted-foreground sm:text-sm">
                 موثوق به من <span className="font-semibold text-foreground">+٤٢٠٠٠ مزارع</span>
                 <br />في المملكة ودول الخليج.
               </div>
@@ -95,11 +95,12 @@ function Hero() {
                 alt="حقول زراعية ممتدّة عند الغروب"
                 width={1920}
                 height={1280}
-                className="aspect-[4/5] w-full object-cover"
+                fetchPriority="high"
+                className="aspect-[4/3] w-full object-cover sm:aspect-[4/5]"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent p-6 text-primary-foreground">
-                <p className="text-xs tracking-[0.22em] text-primary-foreground/80 uppercase">حقل القصيم · موسم ٢٠٢٥</p>
-                <p className="mt-2 max-w-xs text-base font-medium">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent p-4 text-primary-foreground sm:p-6">
+                <p className="text-[10px] tracking-[0.22em] text-primary-foreground/80 uppercase sm:text-xs">حقل القصيم · موسم ٢٠٢٥</p>
+                <p className="mt-2 max-w-xs text-sm font-medium sm:text-base">
                   زيادة إنتاجية القمح بنسبة ٢٣٪ بعد تطبيق برنامج تغذية ووقاية متكامل من زِراعة.
                 </p>
               </div>
@@ -130,13 +131,13 @@ function Hero() {
 /* ============ IMPACT BAR ============ */
 function ImpactBar() {
   return (
-    <section className="mt-20 lg:mt-28">
+    <section className="mt-14 sm:mt-20 lg:mt-28">
       <div className="container-x">
         <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-4">
           {STATS.map((s) => (
-            <div key={s.label} className="bg-background p-7 lg:p-9">
+            <div key={s.label} className="bg-background p-5 sm:p-7 lg:p-9">
               <p className="display-2 tnum text-primary">{s.value}</p>
-              <p className="mt-2 text-sm leading-6 text-muted-foreground">{s.label}</p>
+              <p className="mt-2 text-xs leading-6 text-muted-foreground sm:text-sm">{s.label}</p>
             </div>
           ))}
         </div>
@@ -149,9 +150,9 @@ function ImpactBar() {
 function CategoriesSection() {
   const imgs = [cropWheat, soilHands, heroFields];
   return (
-    <section className="mt-24 lg:mt-36">
+    <section className="mt-20 sm:mt-24 lg:mt-36">
       <div className="container-x">
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
             <p className="eyebrow">المنتجات</p>
             <h2 className="display-2 mt-5">
@@ -163,7 +164,7 @@ function CategoriesSection() {
           </Link>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-5 sm:gap-6 md:mt-12 md:grid-cols-3">
           {PRODUCT_CATEGORIES.map((cat, i) => (
             <Link
               key={cat.slug}
@@ -184,11 +185,11 @@ function CategoriesSection() {
                   {cat.count} منتج
                 </span>
               </div>
-              <div className="flex flex-1 flex-col p-7">
+              <div className="flex flex-1 flex-col p-5 sm:p-7">
                 <p className="text-xs font-semibold tracking-[0.18em] text-primary uppercase">{cat.short}</p>
-                <h3 className="mt-3 text-2xl font-bold">{cat.title}</h3>
+                <h3 className="mt-3 text-xl font-bold sm:text-2xl">{cat.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">{cat.description}</p>
-                <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-foreground">
+                <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-foreground sm:mt-6">
                   تصفّح الفئة
                   <span className="rotate-180 transition-transform group-hover:-translate-x-1">←</span>
                 </span>
