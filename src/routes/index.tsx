@@ -206,15 +206,15 @@ function CategoriesSection() {
 function DiseasesShowcase() {
   const featured = DISEASES.slice(0, 4);
   return (
-    <section className="mt-28 lg:mt-40">
+    <section className="mt-20 sm:mt-28 lg:mt-40">
       <div className="container-x">
-        <div className="relative overflow-hidden rounded-3xl border border-border bg-ink text-primary-foreground">
+        <div className="relative overflow-hidden rounded-2xl border border-border bg-ink text-primary-foreground sm:rounded-3xl">
           <div className="absolute inset-0 opacity-30">
             <img src={diseaseLeaf} alt="" className="h-full w-full object-cover" loading="lazy" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-l from-ink via-ink/85 to-ink/40" />
 
-          <div className="relative grid gap-10 p-8 md:p-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:p-16">
+          <div className="relative grid gap-8 p-5 sm:p-8 md:p-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:p-16">
             <div>
               <p className="eyebrow text-gold">قاعدة المعرفة</p>
               <h2 className="mt-5 font-display text-4xl font-extrabold leading-tight md:text-5xl">
@@ -290,7 +290,7 @@ function WhyUs() {
     { num: "٠٤", title: "برامج موسمية مدروسة", text: "خطط تغذية ووقاية متكاملة مصمّمة لمحصولك ومنطقتك المناخية." },
   ];
   return (
-    <section className="mt-28 lg:mt-40">
+    <section className="mt-20 sm:mt-28 lg:mt-40">
       <div className="container-x grid gap-14 lg:grid-cols-[1fr_1.3fr]">
         <div>
           <p className="eyebrow">لماذا زِراعة</p>
@@ -308,7 +308,7 @@ function WhyUs() {
         </div>
         <div className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2">
           {items.map((it) => (
-            <div key={it.num} className="bg-card p-7">
+            <div key={it.num} className="bg-card p-5 sm:p-7">
               <p className="text-sm font-bold tracking-[0.18em] text-gold tnum">{it.num}</p>
               <h3 className="mt-4 text-lg font-bold">{it.title}</h3>
               <p className="mt-3 text-sm leading-7 text-muted-foreground">{it.text}</p>
@@ -324,7 +324,7 @@ function WhyUs() {
 function KnowledgePreview() {
   const featured = ARTICLES.slice(0, 3);
   return (
-    <section className="mt-28 lg:mt-40">
+    <section className="mt-20 sm:mt-28 lg:mt-40">
       <div className="container-x">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
@@ -370,13 +370,13 @@ function KnowledgePreview() {
 /* ============ TESTIMONIALS ============ */
 function Testimonials() {
   return (
-    <section className="mt-28 lg:mt-40">
+    <section className="mt-20 sm:mt-28 lg:mt-40">
       <div className="container-x">
         <p className="eyebrow">شهادات</p>
         <h2 className="display-2 mt-5 max-w-2xl">يثق بنا من يفهم الحقل عن قرب.</h2>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {TESTIMONIALS.map((t) => (
-            <figure key={t.name} className="flex h-full flex-col rounded-2xl border border-border bg-card p-7 shadow-soft">
+            <figure key={t.name} className="flex h-full flex-col rounded-2xl border border-border bg-card p-5 shadow-soft sm:p-7">
               <span className="font-display text-5xl leading-none text-gold">”</span>
               <blockquote className="mt-2 flex-1 text-base leading-8 text-foreground">
                 {t.quote}
@@ -396,27 +396,27 @@ function Testimonials() {
 /* ============ CONTACT CTA ============ */
 function ContactCta() {
   return (
-    <section className="mt-28 lg:mt-40">
+    <section className="mt-20 sm:mt-28 lg:mt-40">
       <div className="container-x">
-        <div className="relative overflow-hidden rounded-3xl bg-primary p-10 text-primary-foreground md:p-16">
+        <div className="relative overflow-hidden rounded-2xl bg-primary p-6 text-primary-foreground sm:rounded-3xl sm:p-10 md:p-16">
           <div className="absolute inset-0 ag-grain opacity-40" />
           <div className="relative grid items-center gap-10 lg:grid-cols-[1.4fr_1fr]">
             <div>
               <p className="text-xs font-semibold tracking-[0.22em] text-primary-foreground/70 uppercase">جاهزون للمساعدة</p>
-              <h2 className="mt-5 font-display text-4xl font-extrabold leading-tight md:text-5xl">
+              <h2 className="mt-5 font-display text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">
                 لديك تحدٍّ في حقلك؟
                 <br />تحدّث مع مهندس زراعي خلال دقائق.
               </h2>
-              <p className="mt-5 max-w-xl text-base leading-8 text-primary-foreground/85">
+              <p className="mt-5 max-w-xl text-sm leading-7 text-primary-foreground/85 sm:text-base sm:leading-8">
                 اتصال مباشر، استشارة عبر واتساب، أو زيارة ميدانية. نختار معك
                 أنسب طريقة للوصول إلى حلّ حقيقي.
               </p>
             </div>
             <div className="flex flex-col gap-3">
-              <Link to="/contact" className="rounded-xl bg-background px-6 py-5 text-center text-base font-bold text-foreground transition hover:bg-secondary">
+              <Link to="/contact" className="rounded-xl bg-background px-6 py-4 text-center text-base font-bold text-foreground transition hover:bg-secondary sm:py-5">
                 ابدأ المحادثة
               </Link>
-              <a href="tel:+9660000000000" className="rounded-xl border border-primary-foreground/30 px-6 py-5 text-center text-base font-bold text-primary-foreground transition hover:bg-primary-foreground/10">
+              <a href="tel:+9660000000000" className="rounded-xl border border-primary-foreground/30 px-6 py-4 text-center text-base font-bold text-primary-foreground transition hover:bg-primary-foreground/10 sm:py-5">
                 ☎  ٩٢٠٠ ٠٠٠ ٠٠
               </a>
             </div>
