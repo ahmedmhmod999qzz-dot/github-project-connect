@@ -14,7 +14,7 @@ function ContactPage() {
   return (
     <>
       <section className="border-b border-border bg-secondary/40">
-        <div className="container-x py-14 lg:py-20">
+        <div className="container-x py-10 sm:py-14 lg:py-20">
           <p className="eyebrow">تواصل معنا</p>
           <h1 className="display-1 mt-5 max-w-3xl">نحن أقرب إليك ممّا تتصوّر.</h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
@@ -26,7 +26,7 @@ function ContactPage() {
 
       <section className="container-x grid gap-10 py-14 lg:grid-cols-[1.4fr_1fr]">
         {/* Form */}
-        <div className="rounded-2xl border border-border bg-card p-8 shadow-soft">
+        <div className="rounded-2xl border border-border bg-card p-5 shadow-soft sm:p-8">
           <h2 className="text-2xl font-bold">أرسل لنا رسالة</h2>
           <p className="mt-2 text-sm text-muted-foreground">سنرد عليك خلال يوم عمل واحد.</p>
 

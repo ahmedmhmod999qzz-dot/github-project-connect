@@ -35,7 +35,7 @@ function CategoryPage() {
   return (
     <>
       <section className="border-b border-border bg-secondary/40">
-        <div className="container-x py-14 lg:py-20">
+        <div className="container-x py-10 sm:py-14 lg:py-20">
           <nav className="flex items-center gap-2 text-xs text-muted-foreground">
             <Link to="/products" className="hover:text-foreground">المنتجات</Link>
             <span>/</span>
