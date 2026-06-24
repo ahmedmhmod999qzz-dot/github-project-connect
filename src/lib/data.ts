@@ -606,11 +606,11 @@ export const ARTICLES: Article[] = [
     author: "د. سامر العتيبي",
     authorRole: "أستاذ علوم التربة — كلية الزراعة",
     image:
-      "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&fm=webp&w=640&q=55",
     cover:
-      "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=2000&q=80",
+      "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&fm=webp&w=900&q=60",
     intro:
-      "تحضير التربة قبل موسم الربيع ليس مجرّد حرث وتسوية، بل سلسلة قرارات علميّة دقيقة تُحدّد سقف إنتاجك للموسم بأكمله. في هذا الدليل نستعرض منهجية متكاملة طوّرها مهندسو زِراعة بعد متابعة أكثر من ١٢٠٠ حقل خلال السنوات الخمس الماضية.",
+      "تحضير التربة قبل موسم الربيع ليس مجرّد حرث وتسوية، بل سلسلة قرارات علميّة دقيقة تُحدّد سقف إنتاجك للموسم بأكمله. في هذا الدليل نستعرض منهجية متكاملة طوّرها مهندسو النهضة الزراعية والتجارية بعد متابعة أكثر من ١٢٠٠ حقل خلال السنوات الخمس الماضية.",
     sections: [
       {
         heading: "أوّلاً: تحليل التربة الشامل",
@@ -665,11 +665,11 @@ export const ARTICLES: Article[] = [
     readingTime: "١٠ دقائق",
     date: "٢ مارس ٢٠٢٥",
     author: "م. لينا الزهراني",
-    authorRole: "مهندسة ري — قسم الحلول الذكية في زِراعة",
+    authorRole: "مهندسة ري — قسم الحلول الذكية في النهضة الزراعية والتجارية",
     image:
-      "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&fm=webp&w=640&q=55",
     cover:
-      "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=2000&q=80",
+      "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&fm=webp&w=900&q=60",
     intro:
       "في زمن باتت فيه قطرة الماء أغلى من أيّ سماد، لم يعد الري بالتنقيط رفاهية بل ضرورة اقتصادية. لكن تركيب الشبكة وحده لا يكفي — الكفاءة الحقيقية تأتي من جدولة دقيقة مبنيّة على بيانات يومية للمحصول والتربة والمناخ.",
     sections: [
@@ -725,9 +725,9 @@ export const ARTICLES: Article[] = [
     author: "د. خالد منصور",
     authorRole: "استشاري وقاية نبات معتمد",
     image:
-      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&fm=webp&w=640&q=55",
     cover:
-      "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=2000&q=80",
+      "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&fm=webp&w=900&q=60",
     intro:
       "الإدارة المتكاملة للآفات (IPM) ليست تقنية بل فلسفة إدارية: المبيد آخر سلاح نلجأ إليه، لا أوّله. عبر الجمع بين الأصناف المقاومة، والأعداء الطبيعيين، والمراقبة الدقيقة، يمكن خفض كلفة الوقاية ٣٠–٦٠% مع تحسين جودة المحصول.",
     sections: [
@@ -778,9 +778,9 @@ export const ARTICLES: Article[] = [
     author: "د. ريم الحارثي",
     authorRole: "باحثة تغذية نباتية — مركز البحوث الزراعية",
     image:
-      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&fm=webp&w=640&q=55",
     cover:
-      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=80",
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&fm=webp&w=900&q=60",
     intro:
       "الرشّ الورقي ليس بديلاً عن التسميد الأرضي، بل أداة تكميليّة تُستخدم في حالات محدّدة. فهم هذه الحالات يفرّق بين مزارع يهدر المال على رشّات غير ضرورية، وآخر يستفيد من كل قطرة محلول.",
     sections: [
@@ -829,11 +829,11 @@ export const STATS = [
   { value: "+٤٢٠٠٠", label: "مزارع نخدمهم سنوياً" },
   { value: "+٢٩٠", label: "منتج معتمد" },
   { value: "+٦٠", label: "محصولاً مدعوماً" },
-  { value: "٢٧", label: "سنة من الخبرة الميدانية" },
+  { value: "+٥٠", label: "سنة من الخبرة الميدانية" },
 ];
 
 export const TESTIMONIALS = [
-  { name: "أحمد بن سعيد", role: "مالك مزرعة، القصيم", quote: "تعاملنا مع زِراعة غيّر طريقة إدارتنا للحقل بالكامل. التشخيص الدقيق للأمراض والبرنامج المتكامل وفّر علينا خسائر كبيرة في موسم واحد." },
+  { name: "أحمد بن سعيد", role: "مالك مزرعة، القصيم", quote: "تعاملنا مع النهضة الزراعية والتجارية غيّر طريقة إدارتنا للحقل بالكامل. التشخيص الدقيق للأمراض والبرنامج المتكامل وفّر علينا خسائر كبيرة في موسم واحد." },
   { name: "م. هند الرشيد", role: "مديرة إنتاج، شركة بساتين النخيل", quote: "أعتمد على قاعدة المعرفة بشكل يومي. مستوى التفصيل والمراجع العلمية يفوق ما هو متاح بالعربية في أي مكان آخر." },
   { name: "د. ماجد الفهد", role: "استشاري زراعي", quote: "تشكيلة المنتجات احترافية، والدعم الفني سريع ومتخصّص. أنصح بها لكلّ من يبحث عن شريك زراعي جدّي." },
 ];
@@ -843,7 +843,7 @@ export const TIMELINE = [
   { year: "٢٠٠٧", title: "التوسّع الإقليمي", text: "افتتاح أوّل مستودع إقليمي وتوسيع شبكة الموزّعين." },
   { year: "٢٠١٤", title: "وحدة وقاية النبات", text: "إطلاق قسم متخصّص في المبيدات والاستشارات الفنية." },
   { year: "٢٠٢٠", title: "منصة المعرفة الرقمية", text: "إطلاق أوّل قاعدة بيانات عربية للأمراض الزراعية وحلولها." },
-  { year: "٢٠٢٥", title: "زِراعة 3.0", text: "منصة متكاملة تجمع المنتجات والمعرفة وأدوات التشخيص الذكي." },
+  { year: "٢٠٢٥", title: "النهضة الزراعية والتجارية 3.0", text: "منصة متكاملة تجمع المنتجات والمعرفة وأدوات التشخيص الذكي." },
 ];
 
 export const VALUES = [

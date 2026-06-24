@@ -6,7 +6,7 @@ export const Route = createFileRoute("/products/$category/$id")({
     const p = PRODUCTS.find((x) => x.id === params.id);
     return {
       meta: [
-        { title: `${p?.name ?? "منتج"} — زِراعة` },
+        { title: `${p?.name ?? "منتج"} — النهضة الزراعية والتجارية` },
         { name: "description", content: p?.description ?? "" },
       ],
     };
@@ -29,7 +29,10 @@ function ProductDetail() {
     <>
       <section className="border-b border-border bg-secondary/40">
         <div className="container-x py-12">
-          <nav className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+          <Link to="/products/$category" params={{ category: cat.slug }} className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-3 py-1.5 text-xs font-semibold text-foreground hover:bg-secondary">
+            <span>→</span> العودة إلى {cat.title}
+          </Link>
+          <nav className="mt-4 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
             <Link to="/products" className="hover:text-foreground">المنتجات</Link>
             <span>/</span>
             <Link to="/products/$category" params={{ category: cat.slug }} className="hover:text-foreground">{cat.title}</Link>

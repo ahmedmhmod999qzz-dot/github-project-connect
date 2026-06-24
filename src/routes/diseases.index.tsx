@@ -1,14 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { DISEASES, DISEASE_CATEGORIES, CROP_TAGS, type DiseaseCategory } from "@/lib/data";
-import diseaseLeaf from "@/assets/disease-leaf.jpg";
+import diseaseLeaf from "@/assets/disease-leaf.webp";
 
 export const Route = createFileRoute("/diseases/")({
   head: () => ({
     meta: [
-      { title: "الأمراض الزراعية والحلول — زِراعة" },
+      { title: "الأمراض الزراعية والحلول — النهضة الزراعية والتجارية" },
       { name: "description", content: "قاعدة معرفية عربية متكاملة لتشخيص أمراض المحاصيل وآفاتها ووضع برامج العلاج والوقاية." },
-      { property: "og:title", content: "مركز الأمراض والحلول الزراعية — زِراعة" },
+      { property: "og:title", content: "مركز الأمراض والحلول الزراعية — النهضة الزراعية والتجارية" },
       { property: "og:image", content: diseaseLeaf },
     ],
   }),
@@ -36,7 +36,7 @@ function DiseasesIndex() {
       {/* ===== HERO ===== */}
       <section className="relative overflow-hidden border-b border-border bg-ink text-primary-foreground">
         <div className="absolute inset-0 opacity-25">
-          <img src={diseaseLeaf} alt="" className="h-full w-full object-cover" />
+          <img src={diseaseLeaf} alt="" className="h-full w-full object-cover" decoding="async" fetchPriority="high" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-l from-ink via-ink/85 to-ink/60" />
         <div className="container-x relative py-12 sm:py-16 lg:py-24">
