@@ -1,13 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { TIMELINE, VALUES } from "@/lib/data";
-import soilHands from "@/assets/soil-hands.jpg";
+import soilHands from "@/assets/soil-hands.webp";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "عن زِراعة — قصّتنا ورؤيتنا" },
-      { name: "description", content: "زِراعة شركة سعودية متخصّصة في الحلول الزراعية المتكاملة منذ عام ١٩٩٨." },
-      { property: "og:title", content: "عن زِراعة — قصّتنا ورؤيتنا" },
+      { title: "عن النهضة الزراعية والتجارية — قصّتنا ورؤيتنا" },
+      { name: "description", content: "النهضة الزراعية والتجارية شركة سعودية متخصّصة في الحلول الزراعية المتكاملة منذ عام ١٩٩٨." },
+      { property: "og:title", content: "عن النهضة الزراعية والتجارية — قصّتنا ورؤيتنا" },
       { property: "og:image", content: soilHands },
     ],
   }),
@@ -22,18 +22,18 @@ function AboutPage() {
           <div>
             <p className="eyebrow">عن الشركة</p>
             <h1 className="display-1 mt-6">
-              ٢٧ عاماً في خدمة الأرض،
+              أكثر من ٥٠ عاماً في خدمة الأرض،
               <br />ومن يعمل عليها.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-muted-foreground">
-              بدأت زِراعة عام ١٩٩٨ كموزّع محلّي صغير، وتحوّلت اليوم إلى منصّة
+              بدأت النهضة الزراعية والتجارية عام ١٩٩٨ كموزّع محلّي صغير، وتحوّلت اليوم إلى منصّة
               زراعية متكاملة تخدم آلاف المزارعين والشركات في المنطقة. ما يجمعنا
               منذ اليوم الأوّل هو إيمان عميق بأنّ الزراعة الجيدة قرار علميّ
               قبل أن تكون منتجاً.
             </p>
           </div>
           <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-card">
-            <img src={soilHands} alt="" width={1400} height={1000} className="aspect-[4/3] w-full object-cover" />
+            <img src={soilHands} alt="" width={720} height={584} loading="lazy" decoding="async" className="aspect-[4/3] w-full object-cover" />
           </div>
         </div>
       </section>
@@ -70,7 +70,7 @@ function AboutPage() {
       {/* Timeline */}
       <section className="container-x py-20">
         <p className="eyebrow">المسيرة</p>
-        <h2 className="display-2 mt-5">محطّات صنعت زِراعة كما هي اليوم.</h2>
+        <h2 className="display-2 mt-5">محطّات صنعت النهضة الزراعية والتجارية كما هي اليوم.</h2>
         <ol className="relative mt-14 space-y-10 border-r border-border pr-8">
           {TIMELINE.map((t) => (
             <li key={t.year} className="relative">

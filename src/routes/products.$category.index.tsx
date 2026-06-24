@@ -6,9 +6,9 @@ export const Route = createFileRoute("/products/$category/")({
     const cat = PRODUCT_CATEGORIES.find((c) => c.slug === params.category);
     return {
       meta: [
-        { title: `${cat?.title ?? "المنتجات"} — زِراعة` },
+        { title: `${cat?.title ?? "المنتجات"} — النهضة الزراعية والتجارية` },
         { name: "description", content: cat?.description ?? "" },
-        { property: "og:title", content: `${cat?.title ?? "المنتجات"} — زِراعة` },
+        { property: "og:title", content: `${cat?.title ?? "المنتجات"} — النهضة الزراعية والتجارية` },
       ],
     };
   },
@@ -35,15 +35,18 @@ function CategoryPage() {
   return (
     <>
       <section className="border-b border-border bg-secondary/40">
-        <div className="container-x py-10 sm:py-14 lg:py-20">
-          <nav className="flex items-center gap-2 text-xs text-muted-foreground">
+        <div className="container-x py-14 lg:py-20">
+          <Link to="/products" className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-3 py-1.5 text-xs font-semibold text-foreground hover:bg-secondary">
+            <span>→</span> العودة إلى المنتجات
+          </Link>
+          <nav className="mt-4 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
             <Link to="/products" className="hover:text-foreground">المنتجات</Link>
             <span>/</span>
             <span className="text-foreground">{cat.title}</span>
           </nav>
           <p className="eyebrow mt-6">{cat.short}</p>
-          <h1 className="display-1 mt-4">{cat.title}</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">{cat.description}</p>
+          <h1 className="display-1 mt-4 text-[1.9rem] sm:text-[2.6rem] lg:text-[4.75rem]">{cat.title}</h1>
+          <p className="mt-6 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">{cat.description}</p>
         </div>
       </section>
 
