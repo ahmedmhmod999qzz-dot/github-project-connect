@@ -1,6 +1,7 @@
 import { Link, useRouter, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Logo } from "./Logo";
+import { ThemeToggle } from "./ThemeToggle";
 
 const NAV = [
   { to: "/", label: "الرئيسية" },
@@ -52,12 +53,12 @@ export function SiteHeader() {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "border-b border-border bg-background/85 backdrop-blur-xl"
-          : "border-b border-transparent bg-background"
+          ? "border-b border-border/60 bg-background/50 backdrop-blur-xl"
+          : "border-b border-transparent bg-background/50 backdrop-blur-md"
       }`}
     >
       <div className="container-x flex h-16 items-center justify-between gap-6 lg:h-20">
-        <Link to="/" className="shrink-0">
+        <Link to="/" className="min-w-0 flex-1 lg:flex-none lg:shrink-0">
           <Logo />
         </Link>
 
@@ -76,7 +77,8 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-2 lg:flex">
+          <ThemeToggle />
           {showBack && (
             <button
               type="button"
@@ -106,6 +108,7 @@ export function SiteHeader() {
         </div>
 
         <div className="flex shrink-0 items-center gap-2 lg:hidden">
+          <ThemeToggle />
           {showBack && (
             <button
               type="button"
