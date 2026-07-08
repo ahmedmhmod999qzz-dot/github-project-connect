@@ -103,11 +103,11 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
         </svg>
       </button>
 
-      {mounted && showHint && (
+      {mounted && showHint && typeof document !== "undefined" && createPortal(
         <div
           role="status"
           aria-live="polite"
-          className="fixed inset-x-3 bottom-4 z-[60] mx-auto flex max-w-md items-start gap-3 rounded-2xl border border-border-strong bg-card/95 p-3.5 shadow-elev backdrop-blur-md sm:inset-x-auto sm:right-6 sm:left-auto"
+          className="fixed inset-x-3 bottom-4 z-[100] mx-auto flex max-w-md items-start gap-3 rounded-2xl border border-border-strong bg-card/95 p-3.5 shadow-elev backdrop-blur-md sm:inset-x-auto sm:right-6 sm:left-auto"
           style={{ animation: "nahda-hint-in 0.35s ease-out" }}
         >
           <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
@@ -148,8 +148,10 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
             </svg>
           </button>
           <style>{`@keyframes nahda-hint-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}`}</style>
-        </div>
+        </div>,
+        document.body,
       )}
+
     </>
   );
 }
