@@ -116,13 +116,25 @@ function ProductDetail() {
             {product.image ? (
               <div
                 className="relative aspect-square overflow-hidden rounded-3xl border border-border/60 shadow-card"
-                style={{ background: `radial-gradient(circle at 30% 20%, ${brand}55 0%, ${brand}22 55%, ${brandDeep}18 100%)` }}
+                style={{
+                  background: `
+                    radial-gradient(120% 80% at 50% 115%, ${brand}33 0%, transparent 55%),
+                    radial-gradient(90% 70% at 50% -10%, #ffffff 0%, transparent 60%),
+                    linear-gradient(180deg, #fafaf7 0%, #ebe8de 100%)
+                  `,
+                }}
               >
+                {/* soft ground shadow beneath product for grounding */}
+                <div
+                  className="pointer-events-none absolute inset-x-16 bottom-8 h-10 rounded-[50%] blur-2xl"
+                  style={{ background: "rgba(0,0,0,0.22)" }}
+                  aria-hidden
+                />
                 <LazyImage
                   src={product.image}
                   alt={product.name}
                   wrapperClassName="absolute inset-0 bg-transparent"
-                  className="!object-contain p-1 sm:p-2"
+                  className="!object-contain p-6 sm:p-8"
                   fetchPriority="high"
                   loading="eager"
                 />
@@ -135,6 +147,7 @@ function ProductDetail() {
                   </span>
                 )}
               </div>
+
             ) : (
               <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-secondary ag-grain">
                 <div className="flex h-full items-end justify-between p-8">
