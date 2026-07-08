@@ -66,13 +66,25 @@ function CategoryPage() {
                 {p.image ? (
                   <div
                     className="relative aspect-square overflow-hidden"
-                    style={{ background: `radial-gradient(circle at 30% 20%, ${brand}33 0%, transparent 65%), ${brand}12` }}
+                    style={{
+                      background: `
+                        radial-gradient(120% 80% at 50% 115%, ${brand}22 0%, transparent 55%),
+                        radial-gradient(90% 70% at 50% -10%, #ffffff 0%, transparent 60%),
+                        linear-gradient(180deg, #fafaf7 0%, #eeece4 100%)
+                      `,
+                    }}
                   >
+                    {/* subtle ground shadow beneath product */}
+                    <div
+                      className="pointer-events-none absolute inset-x-8 bottom-4 h-6 rounded-[50%] blur-xl"
+                      style={{ background: "rgba(0,0,0,0.18)" }}
+                      aria-hidden
+                    />
                     <LazyImage
                       src={p.image}
                       alt={p.name}
                       wrapperClassName="absolute inset-0 bg-transparent"
-                      className="!object-contain p-2 transition duration-500 group-hover:scale-105"
+                      className="!object-contain p-4 transition duration-500 group-hover:scale-105"
                     />
                     {(p.listBadge ?? p.badge) && (
                       <span
@@ -81,6 +93,7 @@ function CategoryPage() {
                       >{p.listBadge ?? p.badge}</span>
                     )}
                   </div>
+
                 ) : (
                   <div className="flex items-center justify-between p-6 pb-0">
                     <span className="text-[11px] font-semibold tracking-[0.18em] text-primary uppercase">{cat.title}</span>
